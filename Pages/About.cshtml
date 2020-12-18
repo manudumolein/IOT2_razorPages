@@ -1,0 +1,33 @@
+﻿@page
+@model MyApp.Namespace.AboutModel
+<h2>@Model.Message</h2>
+<br>
+
+<form method="post">
+    <!--inputs id = BCM nummer label is fysieke pin -->
+    <label for="Input1"> input pin18: </label>
+    <input id="pin24"  asp-for="Input1"  disabled/>
+    <br>
+    <label for="Input2"> input pin22: </label>
+    <input id="pin25"  asp-for="Input2"  disabled/> 
+    <br>
+    <label for="Input3"> input pin32: </label>
+    <input id="pin12" asp-for="Input3"  disabled/> 
+    <br>
+    <br>
+    <!--output -->
+    <label for="Output3"> Output pin33: </label>
+    <input type="checkbox" id="pin13" asp-for="Output1" />
+    <br>
+    <label for="Output3">Output pin35:</label>
+    <input type="checkbox" id="pin19" asp-for="Output2" />
+    <br>
+    <label for="Output3"> Output pin37: </label>
+    <input type="checkbox" id="pin26"  asp-for="Output3" />
+    <br>
+    <br>
+    <button  id="sendButton" type="submit">Submit</button>
+</form>
+
+<script src="~/js/signalr/dist/browser/signalr.js"></script>
+<script src="~/js/gpio.js"></script>
